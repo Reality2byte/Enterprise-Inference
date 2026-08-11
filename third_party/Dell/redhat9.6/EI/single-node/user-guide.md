@@ -133,7 +133,6 @@ SSH keys are required to allow **Ansible** or automation scripts to connect secu
 
     If your domain is not registered in DNS, map it manually via `/etc/hosts`:
     ```bash
-    hostname -I   # Retrieve the machine's IP address
     sudo nano /etc/hosts
     ```
 
@@ -383,7 +382,7 @@ curl -k https://${BASE_URL}/Llama-3.1-8B-Instruct-vllmcpu/v1/completions \
 
 Set the base URL and retrieve the master key from the vault file:
 ```bash
-export BASE_URL=https://api.example.com    # Replace with your FQDN
+export BASE_URL=api.example.com    # Replace with your FQDN
 ```
 
 > **Note:** The `litellm_master_key` is located in `core/inventory/metadata/vault.yml`.
